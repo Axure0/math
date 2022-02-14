@@ -1,0 +1,22 @@
+{
+  "name": "math-operations-axure",
+  "version": "1.1.4",
+  "description": "A Simple Math Operations NPM Package Made by Axure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "math",
+    "javascript",
+    "node.js",
+    "math-operations",
+    "operations"
+  ],
+  "author": "Axure",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Axure0/math.git"
+  }
+}
