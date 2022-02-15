@@ -1,9 +1,9 @@
 <p align="center">
-<a><img src="https://img.shields.io/npm/dw/math-operations-axure?style=for-the-badge"/></a>
-<a><img src="https://img.shields.io/github/issues/Axure0/math?style=for-the-badge"></a>
-<a><img src="https://img.shields.io/npm/l/math-operations-axure?style=for-the-badge"></a>
-<a><img src="https://img.shields.io/npm/v/math-operations-axure?style=for-the-badge"></a>
-<a><img src="https://img.shields.io/github/last-commit/Axure0/math?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/npm/dw/math-operations-axure?style=for-the-badge"/></a>
+    <a><img src="https://img.shields.io/github/issues/Axure0/math?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/npm/l/math-operations-axure?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/npm/v/math-operations-axure?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/github/last-commit/Axure0/math?style=for-the-badge"></a>
 </p>
 
 # Features
@@ -11,37 +11,37 @@
 
 ## Examples
 ```js
-const { sum } = require('math-operations-axure)
+const { sum } = require('mathjs-axure')
 
 console.log(sum(1, 2)) // returns 3
 ```
 ```js
-const { subtract } = require('math-operations-axure)
+const { subtract } = require('mathjs-axure')
 
 console.log(subtract(2, 1)) // returns 1
 ```
 ```js
-const { multiply } = require('math-operations-axure)
+const { multiply } = require('mathjs-axure')
 
 console.log(multiply(2, 1)) // returns 2
 ```
 ```js
-const { divide } = require('math-operations-axure)
+const { divide } = require('mathjs-axure')
 
 console.log(divide(3, 5)) // returns 0.6
 ```
 ```js
-const { round } = require('math-operations-axure)
+const { round } = require('mathjs-axure')
 
 console.log(round(3.4)) // returns 3
 ```
 ```js
-const { round } = require('math-operations-axure)
+const { round } = require('mathjs-axure')
 
 console.log(round(3.4, 2)) // returns 7
 ```
 ```js
-const { round } = require('math-operations-axure)
+const { round } = require('mathjs-axure')
 
 console.log(round(3.4, 2, 2)) // returns 4
 ```
