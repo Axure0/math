@@ -1,3 +1,11 @@
+<p align="center">
+<a><img src="https://img.shields.io/npm/dw/math-operations-axure?style=for-the-badge"/></a>
+<a><img src="https://img.shields.io/github/issues/Axure0/math?style=for-the-badge"></a>
+<a><img src="https://img.shields.io/npm/l/math-operations-axure?style=for-the-badge"></a>
+<a><img src="https://img.shields.io/npm/v/math-operations-axure?style=for-the-badge"></a>
+<a><img src="https://img.shields.io/github/last-commit/Axure0/math?style=for-the-badge"></a>
+</p>
+
 # Features
 - Addition, Subtraction, Multiplication and Divition
 
