@@ -7,7 +7,7 @@
 </p>
 
 # Features
-- Addition, Subtraction, Multiplication and Divition
+- Addition, Subtraction, Multiplication, Division, Rounding and Fractions!
 
 ## Examples
 ```js
@@ -34,16 +34,6 @@ console.log(divide(3, 5)) // returns 0.6
 const { round } = require('mathjs-axure')
 
 console.log(round(3.4)) // returns 3
-```
-```js
-const { round } = require('mathjs-axure')
-
-console.log(round(3.4, 2)) // returns 7
-```
-```js
-const { round } = require('mathjs-axure')
-
-console.log(round(3.4, 2, 2)) // returns 4
 ```
 
 ## To Do
