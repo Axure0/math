@@ -2,7 +2,7 @@
   "name": "mathjs-axure",
   "version": "1.2.0",
   "description": "A Simple Math NPM Package Made by Axure.",
-  "main": "index.js",
+  "main": "math/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
