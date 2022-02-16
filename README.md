@@ -1,13 +1,13 @@
 <p align="center">
-    <a><img src="https://img.shields.io/npm/dw/math-operations-axure?style=for-the-badge"/></a>
+    <a><img src="https://img.shields.io/npm/dw/mathjs-axure?style=for-the-badge"/></a>
     <a><img src="https://img.shields.io/github/issues/Axure0/math?style=for-the-badge"></a>
-    <a><img src="https://img.shields.io/npm/l/math-operations-axure?style=for-the-badge"></a>
-    <a><img src="https://img.shields.io/npm/v/math-operations-axure?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/npm/l/mathjs-axure?style=for-the-badge"></a>
+    <a><img src="https://img.shields.io/npm/v/mathjs-axure?style=for-the-badge"></a>
     <a><img src="https://img.shields.io/github/last-commit/Axure0/math?style=for-the-badge"></a>
 </p>
 
 # Features
-- Addition, Subtraction, Multiplication and Divition
+- Addition, Subtraction, Multiplication, Division, Rounding and Fractions!
 
 ## Examples
 ```js
@@ -34,16 +34,6 @@ console.log(divide(3, 5)) // returns 0.6
 const { round } = require('mathjs-axure')
 
 console.log(round(3.4)) // returns 3
-```
-```js
-const { round } = require('mathjs-axure')
-
-console.log(round(3.4, 2)) // returns 7
-```
-```js
-const { round } = require('mathjs-axure')
-
-console.log(round(3.4, 2, 2)) // returns 4
 ```
 
 ## To Do
