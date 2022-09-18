@@ -1,0 +1,22 @@
+{
+  "name": "mathjs-axure",
+  "version": "1.2.0",
+  "description": "A Simple Math NPM Package Made by Axure.",
+  "main": "src/index",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [
+    "math",
+    "javascript",
+    "node.js",
+    "math-operations",
+    "operations"
+  ],
+  "author": "Axure",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Axure0/math.git"
+  }
+}
