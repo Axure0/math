@@ -6,3 +6,4 @@ Object.defineProperty(exports, "sum", { enumerable: true, get: function () { ret
 Object.defineProperty(exports, "subtract", { enumerable: true, get: function () { return operations_1.subtract; } });
 Object.defineProperty(exports, "divide", { enumerable: true, get: function () { return operations_1.divide; } });
 Object.defineProperty(exports, "multiply", { enumerable: true, get: function () { return operations_1.multiply; } });
+// Fractions
