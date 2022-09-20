@@ -1,14 +1,22 @@
+import { paramError } from "../errors/index";
+
 export class Fraction {
   num: number;
   den: number;
 
   /**
-   * @param Number - The number used to create the fraction (i.e. 1 or 0.96)
+   * @param n - The numerator or number (i.e. 1 or 0.96)
+   * @param d - The denominator
    */
 
-  constructor(Number: number) {
-    this.num = Number;
-    this.den = 1;
+  constructor(n: number, d?: number) {
+    if(d) {
+        this.num = n
+        this.den = d
+    } else {
+        this.num = n
+        this.den = 1
+    }
   }
 
   /**
@@ -17,15 +25,19 @@ export class Fraction {
    * @returns The greatest common devisor
    */
 
-  findGcd(a: number, b: number) {
+  private findGcd(a: number, b: number) {
     return b ? this.findGcd(b, a % b) : a;
   }
 
   /**
-   * @returns Converts a number to a fraction and simplifies it
+   * @returns A fraction and simplifies it
    */
 
   simplifiy() {
+    if(this.den !== 1) {
+        const gcd = this.findGcd(this.num, this.den);
+        return new Fraction(this.num / gcd. this.den / gcd)
+    }
     let a = `${this.num}`;
     let d = `${this.den}`;
     let gcd;
@@ -42,10 +54,10 @@ export class Fraction {
         }
       }
 
-      return `${this.num / gcd}/${this.den / gcd}`;
+      return new Fraction(this.num / gcd, this.den / gcd)
     } else {
       const gcd = this.findGcd(this.num, this.den);
-      return `${this.num / gcd}/${this.den / gcd}`;
+      return new Fraction(this.num / gcd, this.den / gcd)
     }
   }
 
@@ -68,9 +80,94 @@ export class Fraction {
         }
       }
 
-      return `${a}/${d}`;
+      return new Fraction(this.num, this.den)
     } else {
-      return `${this.num}/${this.den}`;
+      return new Fraction(this.num, this.den)
+    }
+  }
+
+  /**
+   * @param b
+   * @returns The sum of the two fractions
+   */
+
+  add(b) {
+    if(b instanceof Fraction) {
+        const gcd = this.findGcd(this.den, b.den);
+        return new Fraction((this.num * b.den) / gcd + (b.num * this.den) / gcd, (this.den * b.den) / gcd).simplifiy();
+    } else if (b instanceof Number) {
+
+    } else {
+        throw paramError('b', b)
+    }
+  }
+
+  /**
+   * 
+   * @param b 
+   * @returns The result of two fractions multiplied together
+   */
+
+  mult(b) {
+    if (b instanceof Fraction) {
+      return new Fraction(this.num * b.num, this.den * b.den).simplifiy();
+    } else if(typeof b == "number") {
+      return this.mult(new Fraction(b));
+    } else {
+        throw paramError('b', b)
+    }
+  }
+
+  /**
+   * @returns The reciprocal of the fraction
+   */
+
+  reci() {
+    return new Fraction(this.den, this.num)
+  }
+
+  /**
+   * @param b 
+   * @returns A part of the fraction
+   */
+
+  sub(b) {
+    if (b instanceof Fraction) {
+      return this.add(b.mult(-1));
+    } else if(b instanceof Number) {
+      return this.add(-b);
+    } else {
+        throw paramError('b', b)
+    }
+  }
+
+  /**
+   * @param b 
+   * @returns A fraction divided by a fraction/number
+   */
+
+  div(b) {
+    if (b instanceof Fraction) {
+        return this.mult(b.reci());
+      } else if(typeof b == "number") {
+        return this.mult(new Fraction(1, b));
+      } else {
+        throw paramError('b', b)
+      }
+  }
+
+  /**
+   * @param exp - Exponent
+   * @returns The fraction raised to an exponent
+   */
+
+  pow(exp: number) {
+    if(exp < 0) {
+        return this.reci().pow(-exp)
+    } else if (exp == 1) {
+        return this
+    } else {
+        return new Fraction(this.num ** exp, this.den ** exp)        
     }
   }
 }
